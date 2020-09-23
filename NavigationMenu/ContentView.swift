@@ -10,7 +10,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        ZStack{
+            NavigationView{
+                ZStack{
+                    Text("Welcome to Side Navigation Menu")
+                    .navigationBarTitle("Side Nav Menu")
+                }.navigationBarItems(leading: Button(action: {
+                    //toggle side nav menu
+                }, label: {Image("sideMenu")}))
+            }
+            
+        }
     }
 }
 
