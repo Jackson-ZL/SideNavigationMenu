@@ -29,7 +29,7 @@ struct NavHeader : View{
                 Text("\(self.coins) Coins")
                     .font(.system(size:14))
                     .foregroundColor(self.colorScheme == .dark ? Color.secondary : Color.secondary)
-            }.frame(minWidth:geo.size.width,alignment: .leading)
+            }.frame(width:geo.size.width, height: 160,alignment: .topLeading)
         }.padding(.leading,20).padding(.trailing,20)
     }
 

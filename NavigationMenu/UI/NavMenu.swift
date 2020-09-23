@@ -13,9 +13,12 @@ struct NavMenu : View {
     @Binding var isDrawerOpen:Bool
     
     var body: some View{
-        List(menus, id:\.id){menu in
-            MenuItem(menu: menu, isDrawerOpen: self.$isDrawerOpen)
-        }.background(Color.red)
+        GeometryReader{geo in
+            List(self.menus, id:\.id){menu in
+                MenuItem(menu: menu, isDrawerOpen: self.$isDrawerOpen)
+            }.background(Color.red)
+                .padding(.top,10).frame(height:geo.size.height)
+        }
     }
 }
 

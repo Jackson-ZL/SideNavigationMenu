@@ -15,7 +15,7 @@ struct NavFooter : View {
             HStack(alignment: .center, spacing: 10) {
                 Spacer()
                 HStack(alignment: .center, spacing: 10) {
-                    Image("settings").resizable()
+                    Image("settings")
                     Spacer(minLength: 8).fixedSize()
                     Text("Settings")
                 }.frame(alignment:.leading)
@@ -30,7 +30,7 @@ struct NavFooter : View {
                 Spacer()
             }.frame(height: 50)
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-        }
+        }.background(Color.red)
     }
 }
 
