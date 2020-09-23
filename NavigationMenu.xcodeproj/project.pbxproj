@@ -13,6 +13,7 @@
 		C4763FF3251BAAA800CFF55A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4763FF2251BAAA800CFF55A /* Assets.xcassets */; };
 		C4763FF6251BAAA800CFF55A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4763FF5251BAAA800CFF55A /* Preview Assets.xcassets */; };
 		C4763FF9251BAAA800CFF55A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4763FF7251BAAA800CFF55A /* LaunchScreen.storyboard */; };
+		C4764001251BB0CD00CFF55A /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4764000251BB0CD00CFF55A /* Icons.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C4763FF5251BAAA800CFF55A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C4763FF8251BAAA800CFF55A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4763FFA251BAAA800CFF55A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4764000251BB0CD00CFF55A /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +58,10 @@
 		C4763FEB251BAAA200CFF55A /* NavigationMenu */ = {
 			isa = PBXGroup;
 			children = (
+				C4764002251BB0DE00CFF55A /* Assets */,
 				C4763FEC251BAAA200CFF55A /* AppDelegate.swift */,
 				C4763FEE251BAAA200CFF55A /* SceneDelegate.swift */,
 				C4763FF0251BAAA200CFF55A /* ContentView.swift */,
-				C4763FF2251BAAA800CFF55A /* Assets.xcassets */,
 				C4763FF7251BAAA800CFF55A /* LaunchScreen.storyboard */,
 				C4763FFA251BAAA800CFF55A /* Info.plist */,
 				C4763FF4251BAAA800CFF55A /* Preview Content */,
@@ -73,6 +75,15 @@
 				C4763FF5251BAAA800CFF55A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C4764002251BB0DE00CFF55A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C4764000251BB0CD00CFF55A /* Icons.xcassets */,
+				C4763FF2251BAAA800CFF55A /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +146,7 @@
 			files = (
 				C4763FF9251BAAA800CFF55A /* LaunchScreen.storyboard in Resources */,
 				C4763FF6251BAAA800CFF55A /* Preview Assets.xcassets in Resources */,
+				C4764001251BB0CD00CFF55A /* Icons.xcassets in Resources */,
 				C4763FF3251BAAA800CFF55A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
