@@ -22,7 +22,7 @@ struct MenuItem : View {
     var body: some View{
         GeometryReader{geo in
             HStack(alignment: .center, spacing: 20) {
-                Image("earnCoin")
+                Image(self.menu.icon)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 30, height: 30)
@@ -30,6 +30,7 @@ struct MenuItem : View {
                 Text(self.menu.title)
                     .font(.system(size: 18))
                     .frame(maxWidth:.infinity,alignment: .leading)
+                    .foregroundColor(Color.black)
                     .contentShape(Rectangle()) //increase the tappable area
             }.padding(EdgeInsets(top: 4, leading: 20, bottom: 4, trailing: 20))
                 .onTapGesture {
@@ -46,7 +47,7 @@ struct MenuItem_Preview : PreviewProvider {
     @State static var isDrawerOpen = false
     
     static var previews: some View{
-        MenuItem(menu: Menu(id: 0, title: "Home", icon: "logOut"),isDrawerOpen:$isDrawerOpen)
+        MenuItem(menu: Menu(id: 0, title: "Home", icon: "sideMenu"),isDrawerOpen:$isDrawerOpen)
         //MenuItem(menu: Menu(id: 0, title: "Home", icon: "earnCoin"),isDrawerOpen:.constant(true))
     }
 }
