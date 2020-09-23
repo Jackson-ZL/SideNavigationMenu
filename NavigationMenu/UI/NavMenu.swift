@@ -16,8 +16,7 @@ struct NavMenu : View {
         GeometryReader{geo in
             List(self.menus, id:\.id){menu in
                 MenuItem(menu: menu, isDrawerOpen: self.$isDrawerOpen)
-            }.background(Color.red)
-                .padding(.top,10).frame(height:geo.size.height)
+            }.padding(.top,10).frame(height:geo.size.height)
         }
     }
 }

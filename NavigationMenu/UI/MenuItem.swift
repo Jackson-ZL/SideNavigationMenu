@@ -18,6 +18,7 @@ struct MenuItem : View {
     let menu:Menu
     
     @Binding var isDrawerOpen:Bool
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View{
         GeometryReader{geo in
@@ -30,9 +31,9 @@ struct MenuItem : View {
                 Text(self.menu.title)
                     .font(.system(size: 18))
                     .frame(maxWidth:.infinity,alignment: .leading)
-                    .foregroundColor(Color.black)
+                    .foregroundColor(self.colorScheme == .dark ? Color.white : Color.black)
                     .contentShape(Rectangle()) //increase the tappable area
-            }.padding(EdgeInsets(top: 4, leading: 20, bottom: 4, trailing: 20))
+            }.padding(EdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 20))
                 .onTapGesture {
                     self.isDrawerOpen.toggle()
             }
