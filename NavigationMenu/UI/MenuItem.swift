@@ -22,7 +22,7 @@ struct MenuItem : View {
     var body: some View{
         GeometryReader{geo in
             HStack(alignment: .center, spacing: 20) {
-                Image(self.menu.icon)
+                Image("earnCoin")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 30, height: 30)
@@ -46,7 +46,7 @@ struct MenuItem_Preview : PreviewProvider {
     @State static var isDrawerOpen = false
     
     static var previews: some View{
-        MenuItem(menu: Menu(id: 0, title: "Home", icon: "earnCoin"),isDrawerOpen:$isDrawerOpen)
+        MenuItem(menu: Menu(id: 0, title: "Home", icon: "logOut"),isDrawerOpen:$isDrawerOpen)
         //MenuItem(menu: Menu(id: 0, title: "Home", icon: "earnCoin"),isDrawerOpen:.constant(true))
     }
 }

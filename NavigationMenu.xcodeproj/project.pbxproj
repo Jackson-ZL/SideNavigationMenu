@@ -15,6 +15,8 @@
 		C4763FF9251BAAA800CFF55A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4763FF7251BAAA800CFF55A /* LaunchScreen.storyboard */; };
 		C4764001251BB0CD00CFF55A /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4764000251BB0CD00CFF55A /* Icons.xcassets */; };
 		C4764005251BB5E900CFF55A /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4764004251BB5E900CFF55A /* MenuItem.swift */; };
+		C4764007251BBAD500CFF55A /* NavHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4764006251BBAD500CFF55A /* NavHeader.swift */; };
+		C4764009251BC3CF00CFF55A /* NavFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4764008251BC3CF00CFF55A /* NavFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		C4763FFA251BAAA800CFF55A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4764000251BB0CD00CFF55A /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		C4764004251BB5E900CFF55A /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		C4764006251BBAD500CFF55A /* NavHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavHeader.swift; sourceTree = "<group>"; };
+		C4764008251BC3CF00CFF55A /* NavFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavFooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				C4764004251BB5E900CFF55A /* MenuItem.swift */,
+				C4764006251BBAD500CFF55A /* NavHeader.swift */,
+				C4764008251BC3CF00CFF55A /* NavFooter.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -171,6 +177,8 @@
 			files = (
 				C4763FED251BAAA200CFF55A /* AppDelegate.swift in Sources */,
 				C4764005251BB5E900CFF55A /* MenuItem.swift in Sources */,
+				C4764009251BC3CF00CFF55A /* NavFooter.swift in Sources */,
+				C4764007251BBAD500CFF55A /* NavHeader.swift in Sources */,
 				C4763FEF251BAAA200CFF55A /* SceneDelegate.swift in Sources */,
 				C4763FF1251BAAA200CFF55A /* ContentView.swift in Sources */,
 			);
