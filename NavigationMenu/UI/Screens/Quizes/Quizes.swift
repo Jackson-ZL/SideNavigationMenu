@@ -9,10 +9,19 @@
 import SwiftUI
 
 struct Quizes : View {
+    @State var isActive = true
     
     var body: some View{
-        Text("Welcome to the Quizes Page!")
-            .navigationBarTitle("Quizes")
+        GeometryReader{geo in
+            VStack(spacing:20){
+                Text("Welcome to the Quizes Page!")
+                NavigationLink(destination: NonTopLevelDestination()) {
+                    Text("Click Me!")
+                }
+            }.navigationBarTitle("Quizes")
+                .frame(width:geo.size.width,height: geo.size.height)
+                .background(Color.red)
+        }
     }
 }
 

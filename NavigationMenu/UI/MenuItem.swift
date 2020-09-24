@@ -23,7 +23,12 @@ struct MenuItem : View {
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View{
-        GeometryReader{geo in
+        
+        let onTapGesture = TapGesture().onEnded {
+            self.isDrawerOpen.toggle()
+            self.currentTopLevelDestination = self.menu.topLevelDestination
+        }
+        return GeometryReader{geo in
             HStack(alignment: .center, spacing: 20) {
                 Image(self.menu.icon)
                     .resizable()
@@ -36,10 +41,7 @@ struct MenuItem : View {
                     .foregroundColor(self.colorScheme == .dark ? Color.white : Color.black)
                     .contentShape(Rectangle()) //increase the tappable area
             }.padding(EdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 20))
-                .onTapGesture {
-                    self.isDrawerOpen.toggle()
-                    self.currentTopLevelDestination = self.menu.topLevelDestination
-            }
+                .highPriorityGesture(onTapGesture)
             
         }
     }

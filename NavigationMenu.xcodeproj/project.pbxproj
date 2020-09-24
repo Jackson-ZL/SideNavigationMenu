@@ -27,6 +27,7 @@
 		C4764020251C900900CFF55A /* Notificattions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476401F251C900900CFF55A /* Notificattions.swift */; };
 		C4764023251C909600CFF55A /* EarnCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4764022251C909600CFF55A /* EarnCoin.swift */; };
 		C4764026251C937100CFF55A /* Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4764025251C937100CFF55A /* Unwrap.swift */; };
+		C4764029251CA26C00CFF55A /* NonTopLevelDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4764028251CA26C00CFF55A /* NonTopLevelDestination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		C476401F251C900900CFF55A /* Notificattions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificattions.swift; sourceTree = "<group>"; };
 		C4764022251C909600CFF55A /* EarnCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarnCoin.swift; sourceTree = "<group>"; };
 		C4764025251C937100CFF55A /* Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unwrap.swift; sourceTree = "<group>"; };
+		C4764028251CA26C00CFF55A /* NonTopLevelDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonTopLevelDestination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		C4764012251C8DD900CFF55A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C4764027251CA25500CFF55A /* NonTopLevelDestination */,
 				C4764021251C908300CFF55A /* EarnCoin */,
 				C476401E251C8FF500CFF55A /* Notifications */,
 				C476401B251C8F8400CFF55A /* Leaderboard */,
@@ -203,6 +206,14 @@
 				C4764025251C937100CFF55A /* Unwrap.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		C4764027251CA25500CFF55A /* NonTopLevelDestination */ = {
+			isa = PBXGroup;
+			children = (
+				C4764028251CA26C00CFF55A /* NonTopLevelDestination.swift */,
+			);
+			path = NonTopLevelDestination;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +292,7 @@
 				C4764023251C909600CFF55A /* EarnCoin.swift in Sources */,
 				C4764017251C8EB100CFF55A /* Quizes.swift in Sources */,
 				C4764005251BB5E900CFF55A /* MenuItem.swift in Sources */,
+				C4764029251CA26C00CFF55A /* NonTopLevelDestination.swift in Sources */,
 				C4764026251C937100CFF55A /* Unwrap.swift in Sources */,
 				C4764009251BC3CF00CFF55A /* NavFooter.swift in Sources */,
 				C4764011251C037E00CFF55A /* UIColor+Extension.swift in Sources */,

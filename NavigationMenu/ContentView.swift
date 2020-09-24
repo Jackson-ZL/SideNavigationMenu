@@ -6,6 +6,8 @@
 //  Copyright © 2020 Jerry Okafor. All rights reserved.
 //
 
+//
+//https://www.c-sharpcorner.com/article/swift-ui-gesture-and-gesture-state/
 import SwiftUI
 
 struct ContentView: View {
@@ -27,7 +29,7 @@ struct ContentView: View {
     }
     
     var body: some View {
-        
+
         let navDragGesture = DragGesture()
             .onEnded({
             if $0.translation.width > 100{
@@ -40,28 +42,25 @@ struct ContentView: View {
             
         })
         
-        return ZStack{
+        return  ZStack {
             NavigationView{
-                ZStack{
-                    topLevelDestinationView(for: currentTopLevelDestination)
-                }.navigationBarItems(leading: Button(action: {
+                topLevelDestinationView(for: currentTopLevelDestination)
+                .navigationBarItems(leading: Button(action: {
                     //toggle side nav menu
                     self.isDrawerOpen.toggle()
-                    print("Drawe Open: \(self.isDrawerOpen)")
                 }, label: {Image("sideMenu")})
                     .frame(width:30,height: 20)
                     .contentShape(Rectangle())
-                )
-            }.onTapGesture {
-                if self.isDrawerOpen{self.isDrawerOpen.toggle()}
+                ).onTapGesture {
+                    //close sid nav when tapped outside
+                    if self.isDrawerOpen {self.isDrawerOpen = false}
+                }
             }
-
+            
             //add nav drawer
             NavDrawer(isDrawerOpen: $isDrawerOpen, currentTopLevelDestination: $currentTopLevelDestination)
                 .edgesIgnoringSafeArea([.top,.bottom])
-                .transition(.move(edge: .leading))
-                .animation(.interpolatingSpring(stiffness: 50, damping: 1))
-            
+                
         }.gesture(navDragGesture)
     }
 }
