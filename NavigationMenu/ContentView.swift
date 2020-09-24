@@ -11,6 +11,20 @@ import SwiftUI
 struct ContentView: View {
 
     @State var isDrawerOpen = false
+    @State var currentTopLevelDestination:TopLeveelDestination = .quizzes
+    
+    //Note the id(...) that has been added to each AnyView.
+    //This allows SwiftUI to identify the view within it's view hierarchy allowing
+    //it to apply the transition animations correctly.
+    func topLevelDestinationView(for destination:TopLeveelDestination) -> some View {
+        switch(destination){
+        case .quizzes: return AnyView(Quizes()).id("quizzes")
+        case .myChats : return AnyView(Chats()).id("chats")
+        case .leaderboard: return AnyView(Leaderboard()).id("leaderbaord")
+        case .notifications : return AnyView(Notifications()).id("notifications")
+        case .earnCoin: return AnyView(EarnCoin()).id("earnCoin")
+        }
+    }
     
     var body: some View {
         
@@ -29,22 +43,25 @@ struct ContentView: View {
         return ZStack{
             NavigationView{
                 ZStack{
-                    Text("Welcome to Side Navigation Menu")
-                    .navigationBarTitle("Side Nav Menu")
+                    topLevelDestinationView(for: currentTopLevelDestination)
                 }.navigationBarItems(leading: Button(action: {
                     //toggle side nav menu
                     self.isDrawerOpen.toggle()
                     print("Drawe Open: \(self.isDrawerOpen)")
-                }, label: {Image("sideMenu").contentShape(Rectangle())}))
+                }, label: {Image("sideMenu")})
+                    .frame(width:30,height: 20)
+                    .contentShape(Rectangle())
+                )
             }.onTapGesture {
                 if self.isDrawerOpen{self.isDrawerOpen.toggle()}
             }
-            
+
             //add nav drawer
-            NavDrawer(isDrawerOpen: $isDrawerOpen)
+            NavDrawer(isDrawerOpen: $isDrawerOpen, currentTopLevelDestination: $currentTopLevelDestination)
                 .edgesIgnoringSafeArea([.top,.bottom])
                 .transition(.move(edge: .leading))
                 .animation(.interpolatingSpring(stiffness: 50, damping: 1))
+            
         }.gesture(navDragGesture)
     }
 }

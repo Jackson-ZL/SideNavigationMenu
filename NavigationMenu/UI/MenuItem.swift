@@ -9,15 +9,17 @@
 import SwiftUI
 
 struct Menu : Hashable {
-    let id:Int!
-    let title:String!
-    let icon:String!
+    let id:Int
+    let title:String
+    let icon:String
+    let topLevelDestination:TopLeveelDestination
 }
 
 struct MenuItem : View {
     let menu:Menu
     
     @Binding var isDrawerOpen:Bool
+    @Binding var currentTopLevelDestination:TopLeveelDestination
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View{
@@ -36,6 +38,7 @@ struct MenuItem : View {
             }.padding(EdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 20))
                 .onTapGesture {
                     self.isDrawerOpen.toggle()
+                    self.currentTopLevelDestination = self.menu.topLevelDestination
             }
             
         }
@@ -46,9 +49,10 @@ struct MenuItem : View {
 struct MenuItem_Preview : PreviewProvider {
     
     @State static var isDrawerOpen = false
+    @State static var currentTopLevelDestination:TopLeveelDestination = .quizzes
     
     static var previews: some View{
-        MenuItem(menu: Menu(id: 0, title: "Home", icon: "sideMenu"),isDrawerOpen:$isDrawerOpen)
+        MenuItem(menu: Menu(id: 0, title: "Quizzes", icon: "sideMenu",topLevelDestination: .quizzes),isDrawerOpen:$isDrawerOpen, currentTopLevelDestination: $currentTopLevelDestination)
         //MenuItem(menu: Menu(id: 0, title: "Home", icon: "earnCoin"),isDrawerOpen:.constant(true))
     }
 }

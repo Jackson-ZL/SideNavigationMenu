@@ -11,11 +11,12 @@ struct NavMenu : View {
     let menus:[Menu]
     
     @Binding var isDrawerOpen:Bool
+    @Binding var currentTopLevelDestination:TopLeveelDestination
     
     var body: some View{
         GeometryReader{geo in
             List(self.menus, id:\.id){menu in
-                MenuItem(menu: menu, isDrawerOpen: self.$isDrawerOpen)
+                MenuItem(menu: menu, isDrawerOpen: self.$isDrawerOpen, currentTopLevelDestination: self.$currentTopLevelDestination)
             }.padding(.top,10).frame(height:geo.size.height)
         }
     }
@@ -23,13 +24,15 @@ struct NavMenu : View {
 
 
 struct NavMenu_Preview : PreviewProvider {
+    
     @State static var menus = [
-        Menu(id:0, title: "Home", icon:"quizes"),
-        Menu(id:2, title: "Quizs", icon:"myChats")]
+        Menu(id:0, title: "Home", icon:"quizes", topLevelDestination: .quizzes),
+        Menu(id:2, title: "Quizs", icon:"myChats", topLevelDestination: .myChats)]
     
     @State static var isDrawerOpen = false
+    @State static var currntTopLevelDestination:TopLeveelDestination = .quizzes
     
     static var previews: some View {
-        NavMenu(menus: menus,isDrawerOpen: $isDrawerOpen)
+        NavMenu(menus: menus,isDrawerOpen: $isDrawerOpen, currentTopLevelDestination: $currntTopLevelDestination)
     }
 }
