@@ -31,7 +31,7 @@ struct DrawerContent : View {
                     Spacer(minLength: 10).fixedSize()
                     NavMenu(menus: self.menu, isDrawerOpen: self.$isDrawerOpen, currentTopLevelDestination: self.$currentTopLevelDestination).frame( height:240)
                      Spacer()
-                    NavFooter().frame( height:60)
+                    NavFooter(isDrawerOpen: self.$isDrawerOpen).frame( height:60)
                 }.frame(width: geo.size.width, height: geo.size.height,alignment: .top)
                 .background(self.colorScheme == .dark ? self.backgroundDark : self.backgroundLight)
             }
