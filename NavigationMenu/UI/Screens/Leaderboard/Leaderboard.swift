@@ -13,6 +13,7 @@ struct Leaderboard : View {
     var body: some View{
         Text("Welcome to the Leaderbaord Page!")
             .navigationBarTitle("Leaderboard")
+            .frame(maxWidth:.infinity,maxHeight: .infinity)
     }
 }
 

@@ -13,6 +13,10 @@ extension Color{
         return Color("theme")
     }
     
+    static var background:Color{
+        return Color("background")
+    }
+    
     static var error: Color  {
         return Color("error")
     }

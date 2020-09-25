@@ -15,6 +15,10 @@ struct ContentView: View {
     @State var isDrawerOpen = false
     @State var currentTopLevelDestination:TopLeveelDestination = .quizzes
     
+    init() {
+         UINavigationBar.appearance().backgroundColor = UIColor(named: "background")!
+    }
+    
     //Note the id(...) that has been added to each AnyView.
     //This allows SwiftUI to identify the view within it's view hierarchy allowing
     //it to apply the transition animations correctly.
@@ -44,9 +48,6 @@ struct ContentView: View {
         })
         
         return  ZStack {
-            
-            Color.red
-                .edgesIgnoringSafeArea(.all)
             NavigationView{
                 topLevelDestinationView(for: currentTopLevelDestination)
                 .navigationBarItems(leading: Button(action: {
@@ -58,8 +59,9 @@ struct ContentView: View {
                 ).onTapGesture {
                     //close sid nav when tapped outside
                     if self.isDrawerOpen {self.isDrawerOpen = false}
-                }
-            }.background(Color.clear)
+                }.background(Color.background)
+                .edgesIgnoringSafeArea(.vertical)
+            }
             
             //add nav drawer
             NavDrawer(isDrawerOpen: $isDrawerOpen, currentTopLevelDestination: $currentTopLevelDestination)

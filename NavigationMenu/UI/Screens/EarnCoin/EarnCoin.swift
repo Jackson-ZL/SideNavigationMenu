@@ -13,6 +13,7 @@ struct EarnCoin : View {
     var body: some View{
         Text("Welcome to the EarnCoin Page!")
             .navigationBarTitle("Earn Coin")
+            .frame(maxWidth:.infinity,maxHeight: .infinity)
     }
 }
 

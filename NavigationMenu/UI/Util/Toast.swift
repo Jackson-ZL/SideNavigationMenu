@@ -66,7 +66,7 @@ struct Toast<Presenting>: View where Presenting: View {
         }
         return GeometryReader { geometry in
 
-            ZStack(alignment: .top) {
+            ZStack(alignment: .bottom) {
                 self.presenting()
                 ZStack {
                     Capsule()
@@ -79,6 +79,7 @@ struct Toast<Presenting>: View where Presenting: View {
                 } //ZStack (inner)
                 .frame(width: geometry.size.width / 1.25, height: geometry.size.height / 12)
                 .opacity(self.isShowing ? 1 : 0)
+                    .padding(.bottom,40)
                     
 
             }

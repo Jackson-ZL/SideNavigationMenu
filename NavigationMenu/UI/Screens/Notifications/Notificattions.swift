@@ -13,6 +13,7 @@ struct Notifications : View {
     var body: some View{
         Text("Welcome to the Notifications Page!")
             .navigationBarTitle("Notifications")
+            .frame(maxWidth:.infinity,maxHeight: .infinity)
     }
 }
 

@@ -13,6 +13,7 @@ struct Chats : View {
     var body: some View{
         Text("Welcome to the Chats Page!")
             .navigationBarTitle("My Chats")
+            .frame(maxWidth:.infinity,maxHeight: .infinity)
     }
 }
 
