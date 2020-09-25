@@ -28,6 +28,7 @@ struct ContentView: View {
         }
     }
     
+
     var body: some View {
 
         let navDragGesture = DragGesture()
@@ -43,6 +44,9 @@ struct ContentView: View {
         })
         
         return  ZStack {
+            
+            Color.red
+                .edgesIgnoringSafeArea(.all)
             NavigationView{
                 topLevelDestinationView(for: currentTopLevelDestination)
                 .navigationBarItems(leading: Button(action: {
@@ -55,7 +59,7 @@ struct ContentView: View {
                     //close sid nav when tapped outside
                     if self.isDrawerOpen {self.isDrawerOpen = false}
                 }
-            }
+            }.background(Color.clear)
             
             //add nav drawer
             NavDrawer(isDrawerOpen: $isDrawerOpen, currentTopLevelDestination: $currentTopLevelDestination)

@@ -28,6 +28,12 @@
 		C4764023251C909600CFF55A /* EarnCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4764022251C909600CFF55A /* EarnCoin.swift */; };
 		C4764026251C937100CFF55A /* Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4764025251C937100CFF55A /* Unwrap.swift */; };
 		C4764029251CA26C00CFF55A /* NonTopLevelDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4764028251CA26C00CFF55A /* NonTopLevelDestination.swift */; };
+		C4D598A9251E307900B9B964 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D598A8251E307900B9B964 /* Colors.xcassets */; };
+		C4D598AB251E3E7200B9B964 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D598AA251E3E7200B9B964 /* Color+Extension.swift */; };
+		C4D598AD251E465300B9B964 /* Graphics+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D598AC251E465300B9B964 /* Graphics+Extension.swift */; };
+		C4D598AF251E4E3A00B9B964 /* Text+ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D598AE251E4E3A00B9B964 /* Text+ViewModifier.swift */; };
+		C4D598B2251E4EA100B9B964 /* Button+ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D598B1251E4EA100B9B964 /* Button+ViewModifier.swift */; };
+		C4D598B4251E4F1B00B9B964 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D598B3251E4F1B00B9B964 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,12 @@
 		C4764022251C909600CFF55A /* EarnCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarnCoin.swift; sourceTree = "<group>"; };
 		C4764025251C937100CFF55A /* Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unwrap.swift; sourceTree = "<group>"; };
 		C4764028251CA26C00CFF55A /* NonTopLevelDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonTopLevelDestination.swift; sourceTree = "<group>"; };
+		C4D598A8251E307900B9B964 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C4D598AA251E3E7200B9B964 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		C4D598AC251E465300B9B964 /* Graphics+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Graphics+Extension.swift"; sourceTree = "<group>"; };
+		C4D598AE251E4E3A00B9B964 /* Text+ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+ViewModifier.swift"; sourceTree = "<group>"; };
+		C4D598B1251E4EA100B9B964 /* Button+ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+ViewModifier.swift"; sourceTree = "<group>"; };
+		C4D598B3251E4F1B00B9B964 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +124,7 @@
 			children = (
 				C4764000251BB0CD00CFF55A /* Icons.xcassets */,
 				C4763FF2251BAAA800CFF55A /* Assets.xcassets */,
+				C4D598A8251E307900B9B964 /* Colors.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -133,6 +146,7 @@
 		C476400E251C036400CFF55A /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				C4D598B0251E4E7F00B9B964 /* ViewModifiers */,
 				C476400F251C037E00CFF55A /* Extension */,
 			);
 			path = Util;
@@ -142,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				C4764010251C037E00CFF55A /* UIColor+Extension.swift */,
+				C4D598AA251E3E7200B9B964 /* Color+Extension.swift */,
+				C4D598AC251E465300B9B964 /* Graphics+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -204,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				C4764025251C937100CFF55A /* Unwrap.swift */,
+				C4D598B3251E4F1B00B9B964 /* Toast.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -214,6 +231,15 @@
 				C4764028251CA26C00CFF55A /* NonTopLevelDestination.swift */,
 			);
 			path = NonTopLevelDestination;
+			sourceTree = "<group>";
+		};
+		C4D598B0251E4E7F00B9B964 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				C4D598AE251E4E3A00B9B964 /* Text+ViewModifier.swift */,
+				C4D598B1251E4EA100B9B964 /* Button+ViewModifier.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D598A9251E307900B9B964 /* Colors.xcassets in Resources */,
 				C4763FF9251BAAA800CFF55A /* LaunchScreen.storyboard in Resources */,
 				C4763FF6251BAAA800CFF55A /* Preview Assets.xcassets in Resources */,
 				C4764001251BB0CD00CFF55A /* Icons.xcassets in Resources */,
@@ -289,20 +316,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4763FED251BAAA200CFF55A /* AppDelegate.swift in Sources */,
+				C4D598AB251E3E7200B9B964 /* Color+Extension.swift in Sources */,
 				C4764023251C909600CFF55A /* EarnCoin.swift in Sources */,
 				C4764017251C8EB100CFF55A /* Quizes.swift in Sources */,
 				C4764005251BB5E900CFF55A /* MenuItem.swift in Sources */,
 				C4764029251CA26C00CFF55A /* NonTopLevelDestination.swift in Sources */,
 				C4764026251C937100CFF55A /* Unwrap.swift in Sources */,
 				C4764009251BC3CF00CFF55A /* NavFooter.swift in Sources */,
+				C4D598B2251E4EA100B9B964 /* Button+ViewModifier.swift in Sources */,
+				C4D598AF251E4E3A00B9B964 /* Text+ViewModifier.swift in Sources */,
 				C4764011251C037E00CFF55A /* UIColor+Extension.swift in Sources */,
 				C476401A251C8F4D00CFF55A /* Chats.swift in Sources */,
+				C4D598AD251E465300B9B964 /* Graphics+Extension.swift in Sources */,
 				C4764007251BBAD500CFF55A /* NavHeader.swift in Sources */,
 				C476400D251C032600CFF55A /* NavDrawer.swift in Sources */,
 				C4763FEF251BAAA200CFF55A /* SceneDelegate.swift in Sources */,
 				C4763FF1251BAAA200CFF55A /* ContentView.swift in Sources */,
 				C476400B251BC65400CFF55A /* NavMenu.swift in Sources */,
 				C4764020251C900900CFF55A /* Notificattions.swift in Sources */,
+				C4D598B4251E4F1B00B9B964 /* Toast.swift in Sources */,
 				C476401D251C8F9500CFF55A /* Leaderboard.swift in Sources */,
 				C4764014251C8DF100CFF55A /* TopLevelDestination.swift in Sources */,
 			);

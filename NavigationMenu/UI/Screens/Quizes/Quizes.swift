@@ -10,17 +10,30 @@ import SwiftUI
 
 struct Quizes : View {
     @State var isActive = true
+    @State var showToast = false
     
     var body: some View{
         GeometryReader{geo in
-            VStack(spacing:20){
-                Text("Welcome to the Quizes Page!")
+            VStack(spacing:40){
+                Text("Welcome to the Quizes Page!").primaryHeader()
+                
                 NavigationLink(destination: NonTopLevelDestination()) {
-                    Text("Click Me!")
+                    Text("Click Me!").secondaryHeader()
                 }
-            }.navigationBarTitle("Quizes")
-                .frame(width:geo.size.width,height: geo.size.height)
-                .background(Color.red)
+                
+                Button(action: {
+                    self.showToast.toggle()
+                    }) { Text("Show Toast!") }
+                    .primaryButton()
+                
+                Button(action: {
+                }) { Text("Secondary Button") }
+                    .secondaryButton()
+                
+            }.frame(maxWidth:.infinity,maxHeight: .infinity)
+                .navigationBarTitle(Text("Quizes"),displayMode: .automatic)
+                .toast(isShowing: self.$showToast, type: .success(message: "This is success message"))
+            //.background(Color.red)
         }
     }
 }
