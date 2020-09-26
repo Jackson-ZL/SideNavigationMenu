@@ -16,7 +16,7 @@ public struct PrimaryButton: ViewModifier {
                         weight: .semibold,
                         design: .default))
         .overlay(
-            RoundedRectangle(cornerRadius: 20)
+            RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.theme, lineWidth: 1)
         )
             
