@@ -14,7 +14,7 @@ struct DrawerContent : View {
     @Binding var coins:Int
     @Binding var menu:[Menu]
     @Binding var isDrawerOpen:Bool
-    @Binding var currentTopLevelDestination:TopLeveelDestination
+    @Binding var currentTopLevelDestination:TopLevelDestination
     
     @Environment(\.colorScheme) var colorScheme
        
@@ -44,7 +44,7 @@ struct NavDrawer:View {
     private let width   = UIScreen.main.bounds.width - 100
 
     @Binding var isDrawerOpen:Bool
-    @Binding var currentTopLevelDestination:TopLeveelDestination
+    @Binding var currentTopLevelDestination:TopLevelDestination
     
     @State var name = "Hanne Fields"
     @State var coins = 28966
@@ -71,7 +71,7 @@ struct NavDrawer:View {
 
 struct NavDrawer_Preveiw : PreviewProvider {
     @State static var isDrawerOpen = true
-    @State static var currentTopLevelDestination:TopLeveelDestination = .quizzes
+    @State static var currentTopLevelDestination:TopLevelDestination = .quizzes
     
     static var previews: some View{
         NavDrawer(isDrawerOpen:$isDrawerOpen, currentTopLevelDestination: $currentTopLevelDestination )

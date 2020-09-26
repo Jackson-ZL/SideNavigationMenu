@@ -12,14 +12,14 @@ struct Menu : Hashable {
     let id:Int
     let title:String
     let icon:String
-    let topLevelDestination:TopLeveelDestination
+    let topLevelDestination:TopLevelDestination
 }
 
 struct MenuItem : View {
     let menu:Menu
     
     @Binding var isDrawerOpen:Bool
-    @Binding var currentTopLevelDestination:TopLeveelDestination
+    @Binding var currentTopLevelDestination:TopLevelDestination
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View{
@@ -51,7 +51,7 @@ struct MenuItem : View {
 struct MenuItem_Preview : PreviewProvider {
     
     @State static var isDrawerOpen = false
-    @State static var currentTopLevelDestination:TopLeveelDestination = .quizzes
+    @State static var currentTopLevelDestination:TopLevelDestination = .quizzes
     
     static var previews: some View{
         MenuItem(menu: Menu(id: 0, title: "Quizzes", icon: "sideMenu",topLevelDestination: .quizzes),isDrawerOpen:$isDrawerOpen, currentTopLevelDestination: $currentTopLevelDestination)

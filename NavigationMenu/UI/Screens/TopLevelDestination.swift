@@ -11,7 +11,7 @@ import Foundation
 
 /// Represetns top level destination - At any point in time while interacting with these destinations,
 /// we want the hamburger menu to be accessible so the that user can still interact with the SideNavigationMenu
-enum TopLeveelDestination: String{
+enum TopLevelDestination: String{
     case quizzes
     case myChats
     case leaderboard

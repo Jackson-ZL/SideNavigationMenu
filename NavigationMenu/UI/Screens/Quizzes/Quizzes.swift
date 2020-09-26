@@ -8,22 +8,23 @@
 
 import SwiftUI
 
-struct Quizes : View {
+struct Quizzes : View {
     @State var isActive = true
     @State var showToast = false
     
     var body: some View{
         GeometryReader{geo in
             VStack(spacing:40){
-                Text("Welcome to the Quizes Page!").primaryHeader()
+                Text("Welcome to the Quizzes Page!").primaryHeader()
                 
                 NavigationLink(destination: NonTopLevelDestination()) {
                     Text("Click Me!").secondaryHeader()
+                        
                 }
                 
                 Button(action: {
                     self.showToast.toggle()
-                    }) { Text("Show Toast!") }
+                }) { Text("Show Toast!") }
                     .primaryButton()
                 
                 Button(action: {
@@ -31,19 +32,19 @@ struct Quizes : View {
                     .secondaryButton()
                 
             }.frame(maxWidth:.infinity,maxHeight: .infinity)
-                .navigationBarTitle(Text("Quizes"),displayMode: .automatic)
+                .navigationBarTitle(Text("Quizzes"),displayMode: .automatic)
                 .toast(isShowing: self.$showToast, type: .success(message: "This is success message"))
-            //.background(Color.red)
+            
         }
     }
 }
 
 
-struct Quizes_Preview : PreviewProvider {
+struct Quizzes_Preview : PreviewProvider {
     
     static var previews: some View{
         NavigationView{
-            Quizes()
+            Quizzes()
         }
     }
 }

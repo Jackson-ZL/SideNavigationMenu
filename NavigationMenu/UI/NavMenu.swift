@@ -11,7 +11,7 @@ struct NavMenu : View {
     let menus:[Menu]
     
     @Binding var isDrawerOpen:Bool
-    @Binding var currentTopLevelDestination:TopLeveelDestination
+    @Binding var currentTopLevelDestination:TopLevelDestination
     
     var body: some View{
         GeometryReader{geo in
@@ -30,7 +30,7 @@ struct NavMenu_Preview : PreviewProvider {
         Menu(id:2, title: "Quizs", icon:"myChats", topLevelDestination: .myChats)]
     
     @State static var isDrawerOpen = false
-    @State static var currntTopLevelDestination:TopLeveelDestination = .quizzes
+    @State static var currntTopLevelDestination:TopLevelDestination = .quizzes
     
     static var previews: some View {
         NavMenu(menus: menus,isDrawerOpen: $isDrawerOpen, currentTopLevelDestination: $currntTopLevelDestination)

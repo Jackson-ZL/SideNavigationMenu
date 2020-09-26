@@ -14,7 +14,8 @@ struct NonTopLevelDestination : View {
         Text("This is a non top level destination as you can see!")
             .navigationBarTitle("Details")
             .frame(maxWidth:.infinity,maxHeight: .infinity)
-            .background(Color.background) //order of arrangment matters, this should come last
+            .background(Color.background)
+            .edgesIgnoringSafeArea(.vertical)//order of arrangment matters, this should come last
     }
 }
 

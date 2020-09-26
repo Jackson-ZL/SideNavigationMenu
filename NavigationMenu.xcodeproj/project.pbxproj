@@ -21,7 +21,7 @@
 		C476400D251C032600CFF55A /* NavDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476400C251C032600CFF55A /* NavDrawer.swift */; };
 		C4764011251C037E00CFF55A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4764010251C037E00CFF55A /* UIColor+Extension.swift */; };
 		C4764014251C8DF100CFF55A /* TopLevelDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4764013251C8DF100CFF55A /* TopLevelDestination.swift */; };
-		C4764017251C8EB100CFF55A /* Quizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4764016251C8EB100CFF55A /* Quizes.swift */; };
+		C4764017251C8EB100CFF55A /* Quizzes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4764016251C8EB100CFF55A /* Quizzes.swift */; };
 		C476401A251C8F4D00CFF55A /* Chats.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4764019251C8F4D00CFF55A /* Chats.swift */; };
 		C476401D251C8F9500CFF55A /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476401C251C8F9500CFF55A /* Leaderboard.swift */; };
 		C4764020251C900900CFF55A /* Notificattions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C476401F251C900900CFF55A /* Notificattions.swift */; };
@@ -53,7 +53,7 @@
 		C476400C251C032600CFF55A /* NavDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavDrawer.swift; sourceTree = "<group>"; };
 		C4764010251C037E00CFF55A /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		C4764013251C8DF100CFF55A /* TopLevelDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopLevelDestination.swift; sourceTree = "<group>"; };
-		C4764016251C8EB100CFF55A /* Quizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizes.swift; sourceTree = "<group>"; };
+		C4764016251C8EB100CFF55A /* Quizzes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizzes.swift; sourceTree = "<group>"; };
 		C4764019251C8F4D00CFF55A /* Chats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chats.swift; sourceTree = "<group>"; };
 		C476401C251C8F9500CFF55A /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 		C476401F251C900900CFF55A /* Notificattions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificattions.swift; sourceTree = "<group>"; };
@@ -170,18 +170,18 @@
 				C476401E251C8FF500CFF55A /* Notifications */,
 				C476401B251C8F8400CFF55A /* Leaderboard */,
 				C4764018251C8F4000CFF55A /* Chats */,
-				C4764015251C8EA100CFF55A /* Quizes */,
+				C4764015251C8EA100CFF55A /* Quizzes */,
 				C4764013251C8DF100CFF55A /* TopLevelDestination.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		C4764015251C8EA100CFF55A /* Quizes */ = {
+		C4764015251C8EA100CFF55A /* Quizzes */ = {
 			isa = PBXGroup;
 			children = (
-				C4764016251C8EB100CFF55A /* Quizes.swift */,
+				C4764016251C8EB100CFF55A /* Quizzes.swift */,
 			);
-			path = Quizes;
+			path = Quizzes;
 			sourceTree = "<group>";
 		};
 		C4764018251C8F4000CFF55A /* Chats */ = {
@@ -318,7 +318,7 @@
 				C4763FED251BAAA200CFF55A /* AppDelegate.swift in Sources */,
 				C4D598AB251E3E7200B9B964 /* Color+Extension.swift in Sources */,
 				C4764023251C909600CFF55A /* EarnCoin.swift in Sources */,
-				C4764017251C8EB100CFF55A /* Quizes.swift in Sources */,
+				C4764017251C8EB100CFF55A /* Quizzes.swift in Sources */,
 				C4764005251BB5E900CFF55A /* MenuItem.swift in Sources */,
 				C4764029251CA26C00CFF55A /* NonTopLevelDestination.swift in Sources */,
 				C4764026251C937100CFF55A /* Unwrap.swift in Sources */,

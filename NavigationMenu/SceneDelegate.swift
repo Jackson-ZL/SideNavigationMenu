@@ -60,17 +60,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    
     private func updateAppearance(){
-        
+        UINavigationBar.appearance().backgroundColor = UIColor(named: "background")!
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(named: "textHeaderPrimary")!]
         
         //Use this if NavigationBarTitle is with displayMode = .inline
 //        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(named: "textHeaderPrimary")!]
         
         UISwitch.appearance().onTintColor = UIColor(named: "theme")
-        
         //set other like tableView etc
-        
     }
 
 }
