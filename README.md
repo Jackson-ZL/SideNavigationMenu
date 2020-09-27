@@ -11,7 +11,7 @@ Side Navigation Menu implementation  with SwiftUI and Compose
 ## Libraries
 * 100% Swift
 * SwiftUI  - SwiftUI is a modern way to declare user interfaces for any Apple platform. Create beautiful, dynamic apps faster than ever before.
-* Compose - The Combine framework provides a declarative Swift API for processing values over time
+* Combine - The Combine framework provides a declarative Swift API for processing values over time
 
 ## Preview
 <p align="center">
