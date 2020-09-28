@@ -23,7 +23,7 @@ Side Navigation Menu implementation  with SwiftUI and Compose
 
 ## Requirements
 * Xcode Version  >= 11.5
-* iPhone Os >= 13.1
+* iPhone OS >= 13.1
 
 ## Find this repository useful? :heart:
 Support it by joining __[stargazers](    https://github.com/jerryOkafor/SideNavigationMenu/stargazers)__ for this repository. :star: <br>
